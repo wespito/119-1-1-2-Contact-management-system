@@ -12,15 +12,15 @@ int main(){
 	FILE *fpw = NULL;
 	int check=0;
 	int i = 0, j = 0, k = 0;
-	int c; //read ¿ë 
+	int c; //read ìš© 
 	int menu_num;
 	char YN;
 	char serch_word[100];
 	struct contact conList[100];
 	
-	fpr = fopen("sample.txt", "rt"); //read ¸ğµå·Î file open
+	fpr = fopen("sample.txt", "rt"); //read ëª¨ë“œë¡œ file open
 	if( fpr == NULL ) {
-		printf("ÆÄÀÏ ÀĞ±â ½ÇÆĞ\n");
+		printf("íŒŒì¼ ì½ê¸° ì‹¤íŒ¨\n");
 	}
 	
 	do { 
@@ -31,11 +31,11 @@ int main(){
 		&conList[i].Email
 		);
 		i++; //size
-	}while((c = fgetc(fpr)) != EOF); //End Of File ±îÁö 
-	printf("ÆÄÀÏ ÀĞ±â ¿Ï·á\n\n");
+	}while((c = fgetc(fpr)) != EOF); //End Of File ê¹Œì§€ 
+	printf("íŒŒì¼ ì½ê¸° ì™„ë£Œ\n\n");
 	
 	do {
-		system( "cls" ); //È­¸é Áö¿ì±â 
+		system( "cls" ); //í™”ë©´ ì§€ìš°ê¸° 
 		//-------------main UI-------------
        printf("\t**** Welcome to Contact Management ****\n\n");
 	   printf("\t\t\tMAIN MENU\n");
@@ -51,7 +51,7 @@ int main(){
 		//-------------main UI-------------
 	
 		scanf_s("%d", &menu_num);
-		system( "cls" ); //È­¸é Áö¿ì±â 
+		system( "cls" ); //í™”ë©´ ì§€ìš°ê¸° 
 		switch (menu_num){
 			//-------------[1]-------------
 			case 1:
@@ -67,7 +67,7 @@ int main(){
 		        printf("Email : ");
 		        scanf_s("%s", &conList[i].Email);
 		        
-		        system( "cls" ); //È­¸é Áö¿ì±â 
+		        system( "cls" ); //í™”ë©´ ì§€ìš°ê¸° 
 		        printf("\n\n\n=============================================================\n");
 				printf("Name   :%s\n", conList[i].Name );
 		       	printf("Phone  :%s\n", conList[i].Phone);
@@ -75,7 +75,7 @@ int main(){
 		       	printf("Email  :%s\n", conList[i].Email);
 		       	printf("==============================================================\n\n\n");
 		       	i++;
-		       	while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+		       	while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 				fflush(stdin);
 			break;
 			//-------------[2]-------------
@@ -92,7 +92,7 @@ int main(){
 			       	printf("Email  :%s\n", conList[j].Email);
 			       	printf("==============================================================\n\n\n");
 		        }
-		        while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+		        while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 				fflush(stdin);
 			break;
 			//-------------[3]-------------
@@ -112,8 +112,8 @@ int main(){
 				}
 				
 				if(j==i) {
-					printf("ÀÏÄ¡ µ¥ÀÌÅÍ ¾øÀ½ \n");
-					while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+					printf("ì¼ì¹˜ ë°ì´í„° ì—†ìŒ \n");
+					while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 					fflush(stdin);
 				}
 				else {
@@ -123,14 +123,14 @@ int main(){
 					printf("\t\t================================\n");
 					printf("Name      Phone No       Address      E-mail ad.\n");
 					printf("================================================\n");
-					printf("Name : %s\nPhone : %s\nAddress : %s\nEmail%s\n", 
+					printf("Name : %s\nPhone : %s\nAddress : %s\nEmail : %s\n", 
 					conList[j].Name, 
 					conList[j].Phone,
 					conList[j].Address,
 					conList[j].Email);
 					printf("================================================\n");
 				} 
-				while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+				while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 				fflush(stdin);
 				break;
 				//-------------[4]-------------
@@ -149,8 +149,8 @@ int main(){
 					}
 					
 					if(j==i) {
-						printf("ÀÏÄ¡ µ¥ÀÌÅÍ ¾øÀ½ \n");
-						while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+						printf("ì¼ì¹˜ ë°ì´í„° ì—†ìŒ \n");
+						while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 						fflush(stdin);
 					}
 					else {
@@ -186,17 +186,17 @@ int main(){
 					        conList[j].Email
 					        );
 					        printf("================================================\n");
-					        while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+					        while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 							fflush(stdin);
 						} else if(check == 2) {
 							system( "cls" ); 
 							printf("Back to main menu");
-							while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+							while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 							fflush(stdin);
 						} else {
 							system( "cls" ); 
 							printf("please enter a valid value");
-							while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+							while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 							fflush(stdin);
 						}
 					}
@@ -217,8 +217,8 @@ int main(){
 					}
 					
 					if(j==i) {
-						printf("ÀÏÄ¡ µ¥ÀÌÅÍ ¾øÀ½ \n");
-						while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+						printf("ì¼ì¹˜ ë°ì´í„° ì—†ìŒ \n");
+						while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 						fflush(stdin);
 					}
 					else {
@@ -245,19 +245,19 @@ int main(){
 						} else if(check == 2) {
 							system( "cls" ); 
 							printf("Back to main menu");
-							while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+							while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 							fflush(stdin);
 						} else {
 							system( "cls" ); 
 							printf("please enter a valid value");
-							while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+							while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 							fflush(stdin);
 						}
 					}
 					break;
 		}
 		
-		if(menu_num == 0) { //³ªÁß¿¡ swich¹®À¸·Î ¹Ù²Ù¼Åµµ µË´Ï
+		if(menu_num == 0) { //ë‚˜ì¤‘ì— swichë¬¸ìœ¼ë¡œ ë°”ê¾¸ì…”ë„ ë©ë‹ˆ
 			printf("Are you sure you want to exit?\n");
 			printf("1.yes / 2.no\n\n");
 			printf("Enter the choice:");
@@ -266,19 +266,19 @@ int main(){
 		              	
 	      	if(check == 1) {
 	      	    menu_num = -1;
-			} else if(check == 2) {//¸Ş´ºÈ­¸éÀ¸·Î µ¹¾Æ°¡¾ß µÊ. 
+			} else if(check == 2) {//ë©”ë‰´í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ì•¼ ë¨. 
 				
 			} else {
 				system( "cls" ); 
 				printf("please enter a valid value");
-				while (!kbhit()); //Å° ÀÔ·Â ´ë±â 
+				while (!kbhit()); //í‚¤ ì…ë ¥ ëŒ€ê¸° 
 				fflush(stdin);
 			}
 		}
 		
 	} while (menu_num != -1);
 	
-	// Á¾·á Àü ÆÄÀÏ ÀúÀå 
+	// ì¢…ë£Œ ì „ íŒŒì¼ ì €ì¥ 
 	fpw = fopen("sample.txt", "wt");
 	for(j = 0; j < i; j++){
 	fprintf(fpw, "%s %s %s %s", 
@@ -290,7 +290,7 @@ int main(){
 			fprintf(fpw, "\n");
 		}
 	}
-	printf("\n ÆÄÀÏ ¾²±â ¼º°ø. Á¾·á\n");
+	printf("\n íŒŒì¼ ì“°ê¸° ì„±ê³µ. ì¢…ë£Œ\n");
 	
 	fclose(fpr);
 	fclose(fpw);
